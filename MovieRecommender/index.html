@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Personality Quiz</title>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #cffffa;
+      color: #1d1c1c;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 25px;
+      padding: 15px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .options label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 24px;
+      font-size: 16px;
+      background: #a5fff6;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #4cadad;
+    }
+    #result {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎬 Personality Movie Quiz</h1>
+  <p style="text-align:center;">Answer the questions honestly to discover the movie best suited to your personality!</p>
+
+  <!-- Q1 -->
+  <div class="question">
+    <h3>1. At a party, you are most likely to…</h3>
+    <div class="options">
+      <label><input type="radio" name="q1" value="cluster0"> Be the life of the party, meeting everyone</label>
+      <label><input type="radio" name="q1" value="cluster1"> Stick with close friends and avoid strangers</label>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question">
+    <h3>2. How do you usually plan your week?</h3>
+    <div class="options">
+      <label><input type="radio" name="q2" value="cluster2"> I plan everything in detail</label>
+      <label><input type="radio" name="q2" value="cluster3"> I go with the flow, no strict plans</label>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question">
+    <h3>3. You prefer movies that…</h3>
+    <div class="options">
+      <label><input type="radio" name="q3" value="cluster4"> Challenge my mind and make me think</label>
+      <label><input type="radio" name="q3" value="cluster5"> Make me laugh and entertain me</label>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question">
+    <h3>4. Which describes you best?</h3>
+    <div class="options">
+      <label><input type="radio" name="q4" value="cluster6"> Adventurous and love trying new things</label>
+      <label><input type="radio" name="q4" value="cluster7"> Prefer routine and familiar activities</label>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question">
+    <h3>5. When facing a challenge, you…</h3>
+    <div class="options">
+      <label><input type="radio" name="q5" value="cluster8"> Stay calm and rational</label>
+      <label><input type="radio" name="q5" value="cluster9"> Get stressed and emotional</label>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question">
+    <h3>6. Your ideal vacation is…</h3>
+    <div class="options">
+      <label><input type="radio" name="q6" value="cluster10"> A quiet beach with a book</label>
+      <label><input type="radio" name="q6" value="cluster11"> Exploring a busy city full of nightlife</label>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="question">
+    <h3>7. How do you usually make decisions?</h3>
+    <div class="options">
+      <label><input type="radio" name="q7" value="cluster12"> Based on logic and facts</label>
+      <label><input type="radio" name="q7" value="cluster13"> Based on feelings and intuition</label>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="question">
+    <h3>8. Do you enjoy working with others?</h3>
+    <div class="options">
+      <label><input type="radio" name="q8" value="cluster14"> Yes, I’m a natural team player</label>
+      <label><input type="radio" name="q8" value="cluster15"> No, I prefer working alone</label>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="question">
+    <h3>9. What kind of endings do you like in movies?</h3>
+    <div class="options">
+      <label><input type="radio" name="q9" value="cluster16"> Happy endings</label>
+      <label><input type="radio" name="q9" value="cluster17"> Tragic or thought-provoking endings</label>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="question">
+    <h3>10. Which describes your lifestyle better?</h3>
+    <div class="options">
+      <label><input type="radio" name="q10" value="cluster18"> Structured and disciplined</label>
+      <label><input type="radio" name="q10" value="cluster19"> Free-spirited and spontaneous</label>
+    </div>
+  </div>
+
+  <!-- Submit -->
+  <button id="submitButton">Get My Movie!</button>
+
+  <!-- Result -->
+  <div id="result"></div>
+
+  <script>
+    // Attach listener
+    document.getElementById("submitButton").addEventListener("click", handleSubmitQuiz);
+  </script>
+</body>
+</html>
